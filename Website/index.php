@@ -1,4 +1,3 @@
-<!DOCTYPE html>
 <html>
 <head>
     <meta charset='utf-8'>
@@ -12,23 +11,10 @@
 <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300&display=swap" rel="stylesheet">
 </head>
 <body>
-    
-  <div class="container">  
- 
-    <ul>
-        <li>Text </li>
-        <li>|</li>
-        <li>Text </li>
-        <li>|</li>
-        <li>Text</li>
-        <li>|</li>
-        <li>Text</li>
-
-    </ul>
-</div>
-
-    <img class="banner" src="images/greenswapbanner2.png" alt=""  srcset="">
-
+  
+    <header>
+        <?php require 'navbar.php'; ?> 
+    </header>
 
     <h1><strong>Featured Listings</strong></h1>
 
