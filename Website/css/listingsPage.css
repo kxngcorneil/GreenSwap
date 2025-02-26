@@ -35,7 +35,7 @@ body{
 
 
 #image{
-    max-width: 100px;
+    max-width: 200px;
     height: auto;
     display: block; 
      margin-right: 0%;
@@ -59,18 +59,20 @@ li {
 }
 
 img {
-    max-width: 100%;
-    height: auto; 
-    display: block;
-    margin: 0 auto;
+    width: 500px;
+    height: 400px; 
+    object-fit: fill;
+ 
+    
 }
 
 h1{
-    color:rgb(2, 2, 2);
+    color:rgb(0, 0, 0);
     padding-top:10px;
     font-size: 50px;
     font-family: 'Open Sans', sans-serif;
     text-align: center;
+    font-family: 'Oswald', sans-serif;
 }
 
 p{
@@ -89,18 +91,16 @@ flex-wrap: wrap;
 row-gap: 100px;
 
 
-
 }
 
 .image-box {
     border: 1px solid rgb(0, 0, 0);
     background-color: rgb(255, 255, 255);
     border-radius: 20px;
-    width: 300px;
-    padding: 20px;
+    width: 500px;
+    padding: 0px;
     box-shadow: 3px 3px 3px 3px rgba(0, 0, 0, 0.257);
-    
-    
+ 
 
 }   
 
@@ -111,6 +111,7 @@ row-gap: 100px;
     font-family: 'Oswald', sans-serif;
     padding-left: 20px;
     padding-right: 20px;
+    height: 0.2px;
 }
 
 .image-box p {
@@ -125,7 +126,8 @@ row-gap: 100px;
 }
 
 .image-box img{
-    border-radius: 0px;
+    border-radius: 20px;
+
 }
 
 .buy{
@@ -133,16 +135,20 @@ row-gap: 100px;
     flex-wrap: wrap;
     justify-content: space-between;
     padding-right: 0px;
+    height: 1px;
+    margin-bottom: 10px;
+    margin-left: 20px;
+    margin-bottom: 30px;
+    
 }
 
 .buy-button h3{
     background-color: #14a943;
     border-radius: 5px;
-    padding-left: 30px;
-    padding-right: 30px;
-    color: white;
+    color: rgb(0, 0, 0);
+    margin-right: 30px;
+    padding-top: 20px;
 
- 
 }
 
 
@@ -160,41 +166,9 @@ footer{
 }
 
 
-.how-it-works{
-    display: flex;
-    flex-wrap: wrap;
-    padding-top: 50px;
-    gap: 25px;
-    margin: auto;
-    padding-left: 195px;
-    padding-right: 195px;
-    line-height: 1px;
-    align-items: center;
-}
-
-.how-it-works img{
-    padding-top: 10px;
-}
-
-.how-it-works h4{
-    font-size: 32px;
-}
 
 .header-text{
     text-align: center;
     font-size: 4em;
 }
-
-.how-it-works  div{
-    width: 470px;
-    height: 280px;
-   
-
-    text-align: center;
-    align-items: center;
-    border: 3px solid #14a943;
-    border-radius: 20px;
-
-}
-
 
