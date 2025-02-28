@@ -14,7 +14,6 @@
     padding: 0;
     box-sizing: border-box;
     font-family: Arial, sans-serif;
-    background-color: #ecf0fa68;
 }
 
 @media (min-width: 1500) { 
@@ -35,7 +34,7 @@
 }
 
 .logo img {
-    width: 95px;
+    width: 100px;
     
 }
 
