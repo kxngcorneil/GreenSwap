@@ -4,7 +4,7 @@
     <meta http-equiv='X-UA-Compatible' content='IE=edge'>
     <title>Home</title>
     <meta name='viewport' content='width=device-width, initial-scale=1'>
-    <link rel='stylesheet' type='text/css' media='screen' href='css/minimal.css'>
+    <link rel='stylesheet' type='text/css' media='screen' href='css/index.css'>
     <script src='main.js'></script>
     <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -13,81 +13,72 @@
 <body>
   
     <header>
-        <?php require 'navbar.php'; ?> 
+        <?php require 'navbar.html'; ?> 
     </header>
+
+    
+    <br>
+    <br>
+    <br>
+    <br>
+
+    <div class = "image-container-header">
+        <img src="images\Home_Image.jpg">
+
+        <h1>GreenSwap</h1>
+    
+        <h2> Swap, Save, Sustain, Together</h2>
+        
+        <p> Join the marketplace that turns pre-loved goods into new opportunities with reducing waste.</p>
+
+        <div id = "get-started-button">
+            <button><a href = "#"> Get Started! </a></button>
+        </div>
+
+        <div id = "browse-listings-button">
+            <button><a href = "#"> Browse Listings </a></button>
+        </div>
+    </div>
+
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
 
     <h1><strong>Featured Listings</strong></h1>
 
-   
-    
- 
-
     <div class="image-container">
+    <?php
+        // Define a single array with item details (Temporary) 
+        // Needs to be updated when currenly just to get look of finished page
+        $item_listings = array(
+            "Image" => "images/placeholder.png",
+            "Name" => "Fancy Pot",
+            "Description" => "This is a very fancy pot and plant my grandmother gave to me. Look how nice it is.",
+            "Price" => "€25.00",
+        );
 
-        <div class="image-box">
-            <img src="images/listing1.webp" length =340 width=340 alt ="Screencap">
-            <h3>Fancy Pot</h3> 
-            <p>This is a very fancy pot and plant my grandmother gave to me. Look how nice it is
-            </p>
+        // Loop 10 times to reuse the same array (Temporary) 
+        // Needs to be updated when currenly just to get look of finished page
+        for ($i = 0; $i < 10; $i++) {
+            echo ' 
+            <div class="image-box">
+                <img src="' . $item_listings["Image"] . '" width="340" height="340" alt="' . $item_listings["Name"] . '">
+                <h3>' . $item_listings["Name"] . '</h3> 
+                <p>' . $item_listings["Description"] . '</p>
+                <div class="buy">
+                    <div class="price"><h3>' . $item_listings["Price"] . '</h3></div>
+                    <div class="buy-button"><h3>Buy</h3></div>
+                </div>  
+            </div>'; 
+        }
+    ?>
+</div>
 
-            <div class="buy">
-          <div class="price"> <h3>$25.00</h3></div>
-         <div class="buy-button"><h3>Buy</h3> </div>
-            </div>
-        </div>
+<br>
+<br>
 
-        <div class="image-box">
-            <img src="images/placeholder.png" length =340 width=340 alt ="Screencap">
-            <h3>ITEM</h3> 
-
-            <p>This is a very fancy pot and plant my grandmother gave to me. Look how nice it is
-            </p>
-
-            <div class="buy">
-          <div class="price"> <h3>$25.00</h3></div>
-         <div class="buy-button"><h3>Buy</h3> </div>
-            </div>  
-        </div>
-
-        <div class="image-box">
-            <img src="images/placeholder.png" length =340px width=340px alt ="Screencap">
-            <h3>ITEM</h3> 
-
-            <p>This is a very fancy pot and plant my grandmother gave to me. Look how nice it is
-            </p>
-
-            <div class="buy">
-          <div class="price"> <h3>$25.00</h3></div>
-         <div class="buy-button"><h3>Buy</h3> </div>
-            </div> 
-        </div>
-
-        <div class="image-box">
-            <img src="images/placeholder.png" length =340 width=340 alt ="Screencap">
-            <h3>ITEM</h3> 
-
-            <p>This is a very fancy pot and plant my grandmother gave to me. Look how nice it is
-            </p>
-
-            <div class="buy">
-          <div class="price"> <h3>$25.00</h3></div>
-         <div class="buy-button"><h3>Buy</h3> </div>
-            </div> 
-        </div>
-
-        <div class="image-box">
-            <img src="images/placeholder.png" length =340 width=340 alt ="Screencap">
-            <h3>ITEM</h3> 
-
-            <p>This is a very fancy pot and plant my grandmother gave to me. Look how nice it is
-            </p>
-
-            <div class="buy">
-          <div class="price"> <h3>$25.00</h3></div>
-         <div class="buy-button"><h3>Buy</h3> </div>
-            </div> 
-        </div>
-    </div>
 
 
     <h3 class="header-text">How It Works</h3>
