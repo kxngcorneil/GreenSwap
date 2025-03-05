@@ -69,7 +69,7 @@ h1 {
 }
 
 p {
-  font-family: "Montserrat", sans-serif;
+  font-family: "Open Sans", sans-serif;
 }
 
 .image-container {
@@ -130,25 +130,14 @@ p {
   color: white;
 }
 
-footer {
-  background-color: black;
-  color: white;
-  padding: 5px;
-  text-align: center;
-  position: static;
-  margin-top: 190px;
-  bottom: 0px;
-  width: 100%;
-}
-
 .how-it-works {
-  display: flex;
+  display: inline-flex;
   flex-wrap: wrap;
   padding-top: 50px;
   gap: 25px;
   margin: auto;
-  padding-left: 195px;
-  padding-right: 195px;
+  padding-left: 100px;
+  padding-right: 100px;
   line-height: 1px;
   align-items: center;
 }
@@ -168,13 +157,18 @@ footer {
 }
 
 .how-it-works div {
-  width: 470px;
-  height: 280px;
-
+  width: 31%;
+  height: 30%;
   text-align: center;
   align-items: center;
   border: 3px solid #14a943;
   border-radius: 20px;
+  line-height: 2px;
+  font-size: 16px;
+  overflow-wrap: break-word;
+  word-wrap: break-word;
+  white-space: normal;
+
 }
 
 .image-container-header img {
