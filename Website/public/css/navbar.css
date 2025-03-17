@@ -59,9 +59,13 @@
     gap: 5px;
 }
 
-.nav-links a.active {
+.nav-links a:hover {
     color: green;
-    font-weight: bold;
+}
+
+.nav-links a:active{
+    color: green;
+    font-weight: 400;
 }
 
 .search-bar {
@@ -109,5 +113,10 @@
     padding: 8px 12px;
     border-radius: 5px;
     cursor: pointer;
+}
+
+a{
+    text-decoration: none;
+    color: black
 }
 
