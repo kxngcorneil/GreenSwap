@@ -20,7 +20,35 @@
 <br>
 <br>
 <br>
+<br>
+<br>
 
+
+    <div class = "sort-container">
+
+        <div class = "category-container">
+            <label for = "category"> Category </label>
+            <br>
+            <select name = category id = category>
+                <option value = "A"> Option A </option>
+                <option value = "B"> Option B</option>
+                <option value = "C"> Option C </option>
+            </select>
+        </div>
+
+        <div class = "price-container">
+            <label for = "min-price"> Min Price </label>
+            <br>
+            <input type ="number" name="min-price" placeholder="0.00">
+            <br>
+            <label for = "max-price"> Max Price </label>
+            <br>
+            <input type ="number" name="max-price" placeholder="0.00">
+                
+        </div>
+
+
+    </div>
     <div class="image-container">
         
         <?php
