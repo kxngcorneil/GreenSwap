@@ -46,7 +46,7 @@
 
         <div class="image-container">
         <?php
-            include 'database_connection.php';
+            include __DIR__ . '/../private/database_connection.php';
             $sql = "SELECT product_name, product_desc, price, product_image_link FROM products LIMIT 10";
             $result = $conn->query($sql);
 
@@ -75,7 +75,7 @@
         <h1>How It Works</h1>
         <div class="how-it-works">
         <?php
-            include 'database_connection.php';
+            include __DIR__ . '/../private/database_connection.php';
             $sql = "SELECT photo_link, title, text FROM howitworks LIMIT 3";
             $result = $conn->query($sql);
 
@@ -91,7 +91,7 @@
 
             $conn->close();
             ?>
-
+ 
         </div>
 
             <br>
