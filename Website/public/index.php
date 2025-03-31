@@ -76,15 +76,15 @@
         <div class="how-it-works">
         <?php
             include __DIR__ . '/../private/database_connection.php';
-            $sql = "SELECT photo_link, title, text FROM howitworks LIMIT 3";
+            $sql = "SELECT PhotoFile, Title, Text FROM howitworks LIMIT 3";
             $result = $conn->query($sql);
 
             if ($result->num_rows > 0) {
                 while ($row = $result->fetch_assoc()) {
                     echo '<div class="works">
-                        <img src="'. $row["photo_link"] .'" width="120" height="120" alt = "' . $row["photo_link"] . '">
-                        <h4>' . $row["title"] . '</h4>
-                        <p>'. $row["text"] .'</p>
+                        <img src="'. $row["PhotoFile"] .'" width="120" height="120" alt = "' . $row["PhotoFile"] . '">
+                        <h4>' . $row["Title"] . '</h4>
+                        <p>'. $row["Text"] .'</p>
                 </div>';
                 }
             }

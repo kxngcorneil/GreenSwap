@@ -3,7 +3,7 @@
 
 $servername = "127.0.0.1";
 $username = "root";
-$password = ""; 
+$password = "RootPassword"; 
 $database = "greenswap";
 
 // Create connection

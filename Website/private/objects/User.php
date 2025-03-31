@@ -1,12 +1,11 @@
 <?php
 class User {
     private int $userID;
-    private string $userName;
     private string $userFirstName;
     private string $userLastName;
     private string $userDateOfBirth;
-    private string $userPassword;
-    private string $userEmailAddress;
+    
+
 
     // Constructor
     public function __construct($userID, $userName, $userFirstName, $userLastName, $userDateOfBirth, $userEmailAddress, $userPassword) {
@@ -25,13 +24,6 @@ class User {
         return $this->userID;
     }
 
-    public function getUserName(): string {
-        return $this->userName;
-    }
-
-    public function getEmailAddress(): string {
-        return $this->userEmailAddress;
-    }
 
     public function getUserFirstName(): string {
         return $this->userFirstName;
@@ -45,21 +37,9 @@ class User {
         return $this->userDateOfBirth;
     }
 
-    public function getUserPassword(): string {
-        return $this->userPassword;
-    }
-
     // Setters
     public function setUserID($userID) {
         $this->userID = $userID;
-    }
-
-    public function setUserName($userName) {
-        $this->userName = $userName;
-    }
-
-    public function setEmailAddress($userEmailAddress) {
-        $this->userEmailAddress = $userEmailAddress;
     }
 
     public function setUserFirstName($userFirstName) {
@@ -72,10 +52,6 @@ class User {
 
     public function setUserDateOfBirth($userDateOfBirth) {
         $this->userDateOfBirth = $userDateOfBirth;
-    }
-
-    public function setUserPassword($userPassword) {
-        $this->userPassword = password_hash($userPassword, PASSWORD_BCRYPT);
     }
 }
 ?>
