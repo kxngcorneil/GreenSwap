@@ -12,7 +12,7 @@
     <body>
 
         <header>
-            <?php require 'navbar.html'; ?> 
+            <?php require 'navbar.php'; ?> 
         </header>
 
         <br>
