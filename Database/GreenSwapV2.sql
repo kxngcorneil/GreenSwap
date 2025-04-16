@@ -59,3 +59,16 @@ order_date_finalised date NOT NULL,
 CONSTRAINT order_id PRIMARY KEY (order_id),
 CONSTRAINT account_id_orders FOREIGN KEY (account_id) REFERENCES Users(account_id)
 );
+
+CREATE TABLE HowitWorks (
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    photo_link VARCHAR(100) NOT NULL,
+    item_name VARCHAR(30) NOT NULL,
+    item_desc VARCHAR(150) NOT NULL
+);
+
+INSERT INTO HowitWorks VALUES
+('Website/public/images/circleplaceholder.png', 'Placeholder 1', 'Placeholder Desc'),
+('Website/public/images/circleplaceholder.png', 'Placeholder 2', 'Placeholder Desc'),
+('Website/public/images/circleplaceholder.png', 'Placeholder 3', 'Placeholder Desc');
+

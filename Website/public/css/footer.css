@@ -21,7 +21,8 @@ footer{
 }
 
 .footer_logo img{
-    height: 200px;
+    padding: 30px;
+    height: 100px;
     width: 500px;
 }
 
@@ -98,6 +99,10 @@ p.bold_text{
     border-radius: 60%;
     margin-top: 5px;
 }
-    
+
+form input{
+    background-color: transparent;
+    text-align: center;
+}
     
 

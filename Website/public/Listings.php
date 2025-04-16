@@ -15,6 +15,7 @@
     
 
 <?php require 'navbar.php' ?>
+<?php require 'functions.php' ?>
 
 <br>
 <br>
@@ -22,57 +23,25 @@
 <br>
 <br>
 <br>
-
-
-    <div class = "sort-container">
-
-        <div class = "category-container">
-            <label for = "category"> Category </label>
-            <br>
-            <select name = category id = category>
-                <option value = "A"> Option A </option>
-                <option value = "B"> Option B</option>
-                <option value = "C"> Option C </option>
-            </select>
-        </div>
-
-        <div class = "price-container">
-            <label for = "min-price"> Min Price </label>
-            <br>
-            <input type ="number" name="min-price" placeholder="0.00">
-            <br>
-            <label for = "max-price"> Max Price </label>
-            <br>
-            <input type ="number" name="max-price" placeholder="0.00">
-                
-        </div>
-
-
-    </div>
+    <h2> Plants </h2>
     <div class="image-container">
-        
-        <?php
-            include 'database_connection.php';
-            $sql = "SELECT product_name, product_desc, price, product_image_link FROM products";
-            $result = $conn->query($sql);
+     <?php getItems("Plant") ?>
+    </div>
 
-            if ($result->num_rows > 0) {
-                while ($row = $result->fetch_assoc()) {
-                    echo ' 
-                    <div class="image-box">
-                        <img src="' . $row["product_image_link"] . '" width="340" height="340" alt="' . $row["product_name"] . '">
-                        <h3>' . $row["product_name"] . '</h3> 
-                        <p>' . $row["product_desc"] . '</p>
-                        <div class="buy">
-                            <div class="price"><h3>€' . number_format($row["price"], 2) . '</h3></div>
-                            <div class="buy-button"><button><a href = "#"><h3>Buy</h3></a></button></div>
-                        </div>  
-                    </div>'; 
-                }
-            }
+    <BR>
+    <bR>
 
-            $conn->close();
-        ?>
+    <h2> Toys </h2>
+    <div class="image-container">
+        <?php getItems("Toys") ?>
+    </div>
+
+    <BR>
+    <bR>
+
+    <h2> Second-Hand Video </h2>
+    <div class="image-container">
+    <?php getItems("Toys") ?>
     </div>
 
 </body>

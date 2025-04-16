@@ -1,6 +1,3 @@
-<?php
-session_start();
-?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -25,10 +22,16 @@ session_start();
             <input type="text" placeholder="Search items or categories">
             <button><i class="fas fa-search"></i></button>
         </div>
-        <div class="nav-buttons">
-            <button class="join"><a href="signup.html">Get Started</a></button>
-            <button class="login"><a href="login.html">Login</a></button>
-        </div>
+        <?php if (isset($_SESSION['Active']) && $_SESSION['Active'] === false) {
+            echo '<div class="nav-buttons">';
+            echo '<button class="join"><a href="signup.html">Get Started</a></button>';
+            echo '<button class="login"><a href="login.html">Login</a></button>';
+            echo '</div>';
+            }      
+            elseif (isset($_SESSION['Active']) && $_SESSION['Active'] === true) {
+            echo '<h2>Welcome, ' . htmlspecialchars($_SESSION['username']) . '!</h2>';
+            }
+?>
     </nav>
 </body>
 </html>

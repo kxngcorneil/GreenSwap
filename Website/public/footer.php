@@ -11,6 +11,8 @@
 
 <body>
     <footer>
+        <?php include __DIR__ . '/../private/database_connection.php'; ?>
+
         <div class="flex-container">
             <div class="flex1">
                 <div class="footer_logo">
@@ -43,21 +45,26 @@
                     <p class="link"><a href="#">General FAQs</a></p>
                 </div>
             </div>
-            <div class="flex-container3">
-                <div class="Newsletter">
-                    <input type="text" placeholder="Your Email" />
-                    <button><i class="fa-solid fa-envelope"></i></button>
-                </div>
-
-                <div class="SocialLinks">
-                    <a href="#"><i class="fa-brands fa-facebook"></i></a>
-                    <a href="#"><i class="fa-solid fa-x"></i></a>
-                    <a href="#"><i class="fa-brands fa-linkedin"></i></a>
-                    <a href="#"><i class="fa-brands fa-instagram"></i></a></i>
-
-                </div>
-
+            <div class="Newsletter">
+                <form action="" method="POST">
+                    <input type="email" name="email" placeholder="Enter Your Email" required />
+                    <br>
+                    <button type="submit"><i class="fa-solid fa-envelope"></i> Subscribe to our Mailing List</button>
+                </form>
             </div>
+
+
+        </div>
+
+        <div class="SocialLinks">
+            <a href="#"><i class="fa-brands fa-facebook"></i></a>
+            <a href="#"><i class="fa-solid fa-x"></i></a>
+            <a href="#"><i class="fa-brands fa-linkedin"></i></a>
+            <a href="#"><i class="fa-brands fa-instagram"></i></a></i>
+
+        </div>
+
+        </div>
 
 
         </div>

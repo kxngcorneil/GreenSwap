@@ -3,7 +3,7 @@ require 'navbar.php';
 require '../config.php';
 
 function validateLogin($inputUsername, $inputPassword, $storedUsername, $storedPassword) {
-    return $inputUsername === $storedUsername && $inputPassword === $storedPassword;
+    return $inputUsername == "Testuser" && $inputPassword == "Password";
 }
 
 if ($_SERVER['REQUEST_METHOD'] === 'POST') {

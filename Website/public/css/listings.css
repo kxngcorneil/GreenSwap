@@ -13,7 +13,10 @@
     border: 1px solid rgb(0, 0, 0);
     background-color: rgb(255, 255, 255);
     border-radius: 20px;
-    width: 290px;
+    min-height: 480px;
+    min-width: 290px;
+    max-width: 290px;
+    max-height: 480px;
     padding: 20px;
     box-shadow: 3px 3px 3px 3px rgba(0, 0, 0, 0.257);
   }
@@ -38,6 +41,8 @@
   
   .image-box img {
     border-radius: 20px;
+    max-width: 250px;
+    max-height: 240px;
   }
 
   img{
@@ -66,4 +71,9 @@
   .buy-button button{
     border: 0px;
     background-color: white;
+  }
+
+  h2 { 
+    text-align: center;
+    text-decoration: solid;
   }

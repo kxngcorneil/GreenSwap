@@ -10,9 +10,9 @@
     <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300&display=swap" rel="stylesheet">
 </head>
     <body>
-
         <header>
             <?php require 'navbar.php'; ?> 
+            <?php require 'functions.php'; ?>
         </header>
 
         <br>
@@ -42,63 +42,24 @@
         <br>
         <br>
 
+        <h1>How It Works</h1>
+        <div class="how-it-works">
+         <?php getHowitWorks() ?>
+        </div>
+        <br>
+        <br>
+
         <h1><strong>Featured Listings</strong></h1>
 
         <div class="image-container">
-        <?php
-            include __DIR__ . '/../private/database_connection.php';
-            $sql = "SELECT product_name, product_desc, price, product_image_link FROM products LIMIT 10";
-            $result = $conn->query($sql);
-
-            if ($result->num_rows > 0) {
-                while ($row = $result->fetch_assoc()) {
-                    echo ' 
-                    <div class="image-box">
-                        <img src="' . $row["product_image_link"] . '" width="340" height="340" alt="' . $row["product_name"] . '">
-                        <h3>' . $row["product_name"] . '</h3> 
-                        <p>' . $row["product_desc"] . '</p>
-                        <div class="buy">
-                            <div class="price"><h3>€' . number_format($row["price"], 2) . '</h3></div>
-                            <div class="buy-button"><button><a href = "#"><h3>Buy</h3></a></button></div>
-                        </div>  
-                    </div>'; 
-                }
-            }
-
-            $conn->close();
-        ?>
+        <?php getItems('Featured') ?>
     </div>
 
     <br>
     <br>
 
-        <h1>How It Works</h1>
-        <div class="how-it-works">
-        <?php
-            include __DIR__ . '/../private/database_connection.php';
-            $sql = "SELECT photo_link, title, text FROM howitworks LIMIT 3";
-            $result = $conn->query($sql);
-
-            if ($result->num_rows > 0) {
-                while ($row = $result->fetch_assoc()) {
-                    echo '<div class="works">
-                        <img src="'. $row["photo_link"] .'" width="120" height="120" alt = "' . $row["photo_link"] . '">
-                        <h4>' . $row["title"] . '</h4>
-                        <p>'. $row["text"] .'</p>
-                </div>';
-                }
-            }
-
-            $conn->close();
-            ?>
- 
-        </div>
-
-            <br>
-            <br>
-
         <footer>
-            <?php require 'footer.html' ?>
+            <?php require 'footer.php' ?>
         </footer>
         
     </body>
