@@ -26,7 +26,6 @@
                 <div class="Company_Links">
                     <br>
                     <p class="bold_text">Company</p>
-                    <br>
                     <p class="link"><a href="#">About Us</a></p>
                     <p class="link"><a href="#">Contact</a></p>
                     <p class="link"><a href="#">Blog</a></p>
@@ -39,7 +38,6 @@
                 <div class="Customer_Links">
                     <br>
                     <p class="bold_text">Customer</p>
-                    <br>
                     <p class="link"><a href="#">Terms & Conditions</a></p>
                     <p class="link"><a href="#">Privacy Policy</a></p>
                     <p class="link"><a href="#">General FAQs</a></p>

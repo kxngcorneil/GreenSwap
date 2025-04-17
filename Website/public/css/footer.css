@@ -52,9 +52,10 @@ footer{
     align-items: center;
     border: 1px solid #ccc;
     border-radius: 20px;
+    height: 60px;
     width: 300px;
-    padding: 5px 10px;
-    margin-top: 30px;
+    padding: 5px;
+    margin-top: 50px;
 }
 
 .Newsletter input {
@@ -68,7 +69,6 @@ footer{
     border: none;
     background: none;
     cursor: pointer;
-    color: green;
 }
 
 p {
@@ -104,6 +104,11 @@ p.bold_text{
 form input{
     background-color: transparent;
     text-align: center;
+}
+
+button{
+    background-color: ;
+}
 }
     
 

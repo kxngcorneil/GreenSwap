@@ -54,20 +54,22 @@ function getAllItems($categoryName) {
 
         if ($result->num_rows > 0) {
             while ($row = $result->fetch_assoc()) {
-                echo ' 
-                    <div class="image-box">
-                        <img src="' . $row["product_image_link"] . '" width="340" height="340" alt="' . $row["product_name"] . '">
+                echo '<div class="image-box">
+                        <img src="' . $row["product_image_link"] . '" width="290" height="240" alt="' . $row["product_name"] . '">
                         <h3>' . $row["product_name"] . '</h3> 
                         <p>' . $row["product_desc"] . '</p>
                         <div class="buy">
-                            <div class="price"><h3>€' . number_format($row["price"], 2) . '</h3></div>';
-                            echo '<div class="buy-button">
-                            <a href="itemListing.php?id=$row["product_id"]">
-                                <button><h3>Buy</h3></button>
-                            </a>
-                          </div>';
-                    
+                            <div class="price"><h3>€' . number_format($row["price"], 2) . '</h3></div>
+                            <div class="buy-button">
+                                <a href="itemListing.php?id=' . $row["product_id"] . '">
+                                    <button><h3>Buy</h3></button>
+                                </a>
+                            </div>
+                        </div>
+                    </div>';
             }
+        } else {
+            echo "<p>No products found in this category.</p>";
         }
 
         $conn->close();

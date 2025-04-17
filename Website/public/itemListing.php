@@ -6,6 +6,7 @@
     <meta http-equiv='X-UA-Compatible' content='IE=edge'>
     <title>Listings</title>
     <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <link rel="icon" type="image" href="./images/favicon.ico">
     <link rel='stylesheet' type='text/css' media='screen' href='css/itemListing.css'>
     <script src='main.js'></script>
     <script src="https://kit.fontawesome.com/85df64fd4d.js" crossorigin="anonymous"></script>

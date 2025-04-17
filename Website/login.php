@@ -1,7 +1,7 @@
-<?php
-require 'navbar.php'; 
-require '../config.php';
 
+<?php require __DIR__ . '/../private/templates/navbar.php';?>
+<?php require __DIR__ . '/../private/functions.php' ?>
+<?php
 function validateLogin($inputUsername, $inputPassword, $storedUsername, $storedPassword) {
     return $inputUsername == "Testuser" && $inputPassword == "Password";
 }

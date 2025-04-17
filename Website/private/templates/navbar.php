@@ -24,7 +24,7 @@
                     <a href="Listings.php">All Listings</a>
                     <a href="Plants.php">Plants</a>
                     <a href="Toys.php">Toys</a>
-                    <a href="#">#</a>
+                    <a href="Second_hand_games.php">Secondhand Games</a>
                     <a href="#">#</a>
                     <a href="#">#</a>
                 </div>

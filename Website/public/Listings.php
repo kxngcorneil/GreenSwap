@@ -5,6 +5,7 @@
     <meta http-equiv='X-UA-Compatible' content='IE=edge'>
     <title>Item</title>
     <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <link rel="icon" type="image" href="./images/favicon.ico">
     <link rel='stylesheet' type='text/css' media='screen' href='css/listings.css'>
     <script src='main.js'></script>
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -13,8 +14,8 @@
 </head>
 <body>
     
-
 <?php require __DIR__ . '/../private/templates/navbar.php';?>
+<?php require __DIR__ . '/../private/functions.php' ?><?php require __DIR__ . '/../private/templates/navbar.php';?>
 <?php require __DIR__ . '/../private/functions.php' ?>
 
 <br>

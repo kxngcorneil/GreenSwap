@@ -71,7 +71,7 @@ CREATE TABLE IF NOT EXISTS `products` (
   PRIMARY KEY (`product_id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 
--- Dumping data for table greenswap.products: ~8 rows (approximately)
+-- Dumping data for table greenswap.products: ~33 rows (approximately)
 INSERT INTO `products` (`product_id`, `product_name`, `product_desc`, `product_category`, `price`, `product_image_link`, `product_condition`, `product_stock`) VALUES
 	(1, 'Tropical Leaf Plant', 'Lush banana-style foliage to bring a tropical vibe to any room.', 'Plant', 5.99, 'images\\productImages\\plants\\plant1.png', 'good', 4),
 	(2, 'Zen Leaf Arrangement\n\n', 'Minimalist indoor plant ideal for calming and clean decor styles.\n\n', 'Plant', 14.5, 'images\\productImages\\plants\\plant2.png', 'ripe', 2),
@@ -96,7 +96,16 @@ INSERT INTO `products` (`product_id`, `product_name`, `product_desc`, `product_c
 	(21, 'Knitted Bear Plush', 'Handmade cozy bear with a warm, rustic look.', 'Toys', 11.95, 'images/productImages/toys/toy9.png', NULL, NULL),
 	(22, 'Stacking Rings Tower', 'Brightly colored rings for stacking and motor skill learning.', 'Toys', 8.75, 'images/productImages/toys/toy10.png', NULL, NULL),
 	(23, 'Ride-On Truck', 'Toddler ride-on truck for backyard adventures.', 'Toys', 29.99, 'images/productImages/toys/toy11.png', NULL, NULL),
-	(24, 'Russian Nesting Dolls', 'Traditional matryoshka dolls with colorful designs.', 'Toys', 18.5, 'images/productImages/toys/toy12.png', NULL, NULL);
+	(24, 'Russian Nesting Dolls', 'Traditional matryoshka dolls with colorful designs.', 'Toys', 18.5, 'images/productImages/toys/toy12.png', NULL, NULL),
+	(25, 'Ficus Elastica in Woven Basket', 'An elegant indoor Rubber Plant  presented in a hand-woven basket.', 'Plant', 39.99, 'images\\productImages\\plants\\plant13.png', NULL, NULL),
+	(26, 'Mini Jade Bonsai Duo', 'A set of two charming Jade Bonsai plants in minimalist metallic pots. Perfect for desktops or small shelves.', 'Plant', 24.99, 'images\\productImages\\plants\\plant14.png', NULL, NULL),
+	(27, 'Succulent in Aqua Ceramic Pot', 'A resilient succulent housed in a glossy aqua-colored ceramic pot.', 'Plant', 12.99, 'images\\productImages\\plants\\plant15.png', NULL, NULL),
+	(28, 'Banana Leaf Plant in Wooden Pot', 'A bold statement plant with large banana-like leaves, nestled in a sleek wooden pot for modern aesthetics.', 'Plant', 44.99, 'images\\productImages\\plants\\plant16.png', NULL, NULL),
+	(29, 'Snake Plant on Shelf', 'A stylish snake plant displayed on a minimalist wooden shelf. A striking combination of design and greenery.', 'Plant', 34.5, 'images\\productImages\\plants\\plant17.png', NULL, NULL),
+	(30, 'Desert Aloe in Clay Pot', 'Small but mighty, this Aloe plant thrives in dry conditions and adds rustic charm with its matte clay pot.', 'Plant', 15.75, 'images\\productImages\\plants\\plant18.png', NULL, NULL),
+	(31, 'Topiary Ball in Black Planter', 'A lush, perfectly-rounded topiary plant presented in a modern black container.', 'Plant', 49, 'images\\productImages\\plants\\plant19.png', NULL, NULL),
+	(32, 'Zebra Cactus in Cream Pot', 'A striking zebra cactus with bold striping, placed in a neutral-toned pot to complement any room.', 'Plant', 13.25, 'images\\productImages\\plants\\plant20.png', NULL, NULL),
+	(33, 'Tiny Tree in White Pot', 'A small decorative indoor tree in a clean white planter. Adds subtle greenery and calm to your space.', 'Plant', 18.99, 'images\\productImages\\plants\\plant21.png', NULL, NULL);
 
 -- Dumping structure for table greenswap.users
 CREATE TABLE IF NOT EXISTS `users` (
