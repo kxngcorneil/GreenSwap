@@ -3,6 +3,7 @@
     display: flex;
     position: fixed;
     top: 0;
+    left: 0;
     align-items: center;
     background-color: white;
     justify-content: space-between;
@@ -16,8 +17,6 @@
     box-sizing: border-box;
     font-family: Arial, sans-serif;
 }
-
-
 
 .logo img {
     max-width: 100%;
@@ -84,6 +83,7 @@
 .nav-buttons {
     display: flex;
     gap: 10px;
+    padding-right: 20px;
 }
 
 .nav-buttons .join {

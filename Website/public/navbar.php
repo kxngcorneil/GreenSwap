@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -7,6 +8,7 @@
     <link rel="stylesheet" href="css\navbar.css">
     <script src="https://kit.fontawesome.com/85df64fd4d.js" crossorigin="anonymous"></script>
 </head>
+
 <body>
     <nav class="navbar">
         <div class="logo">
@@ -15,7 +17,7 @@
         <ul class="nav-links">
             <li><a href="index.php" class="active"><i class="fas fa-home"></i> Home</a></li>
             <li><a href=""><i class="fas fa-store"></i> Market</a></li>
-            <li><a href="#"><i class="fas fa-recycle"></i> Sustainability</a></li>
+            <li><a href="sustainability.php"><i class="fas fa-recycle"></i> Sustainability</a></li>
             <li><a href="Listings.php"><i class="fas fa-list"></i> Listing</a></li>
         </ul>
         <div class="search-bar">
@@ -27,11 +29,16 @@
             echo '<button class="join"><a href="signup.html">Get Started</a></button>';
             echo '<button class="login"><a href="login.html">Login</a></button>';
             echo '</div>';
-            }      
-            elseif (isset($_SESSION['Active']) && $_SESSION['Active'] === true) {
+        } elseif (isset($_SESSION['Active']) && $_SESSION['Active'] === true) {
             echo '<h2>Welcome, ' . htmlspecialchars($_SESSION['username']) . '!</h2>';
-            }
-?>
+        } else {
+            echo '<div class="nav-buttons">';
+            echo '<button class="join"><a href="signup.html">Get Started</a></button>';
+            echo '<button class="login"><a href="login.html">Login</a></button>';
+            echo '</div>';
+        }
+        ?>
     </nav>
 </body>
+
 </html>
