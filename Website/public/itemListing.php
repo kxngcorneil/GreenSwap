@@ -15,78 +15,19 @@
 </head>
 
 <body>
-    <?php include 'navbar.php' ?>
-    <br>
-    <br>
-    <br>
-    <br>
-    <
-    <div class="item-container">
-        <div class="left-content">
-            <img src="images\listing1.webp" length="550" height="550" alt="">
-        </div>
 
+<?php 
+require __DIR__ . '/../private/templates/navbar.php'; 
+require __DIR__ . '/../private/functions.php'; 
 
-        <div class="right-content">
-            <div class="text">
-                <h2><strong>Item Name</strong>
-                    <p class="price"><strong>€5.00</strong></p>
-
-                    <div class="desc">
-                        <p>"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
-                            labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco
-                            laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in
-                            voluptate velit esse cillum dolore eu fugiat nulla pariatur."
-
-                        <div item-info>
-                            <table>
-                                <tr>
-                                    <td>
-                                        <i class="fa-solid fa-layer-group"></i>
-                                    </td>
-                                    <td> Category </td>
-                                </tr>
-                                <tr>
-                                    <td>
-                                        <i class="fa-solid fa-location-dot"></i>
-                                    </td>
-                                    <td> Location </td>
-                                </tr>
-                                <tr>
-                                    <td>
-                                        <i class="fa-solid fa-truck"></i>
-                                    </td>
-                                    <td> Delivery Method </td>
-                                </tr>
-                                <tr>
-                                    <td>
-                                        <i class="fa-solid fa-arrow-right-arrow-left"></i>
-                                    </td>
-                                    <td> Item Swap </td>
-                                </tr>
-                            </table>
-                            <br>
-                        </div>
-                        <div>
-                            <p class="buy"><strong>ADD TO CART</strong></p>
-                        </div>
-                    </div>
-                </h2>
-            </div>
-
-
-
-        </div>
-
-
-
-        <footer>
-
-        </footer>
-
-
-
+if (isset($_GET['id'])) {
+    $productID = $_GET['id'];
+    fillInformation($productID);
+} else {
+    echo '<br><br><br><br><br><br><br>';
+    echo "<p>Error: No product ID provided.</p>";
+}
+ ?>
 
 </body>
-
 </html>

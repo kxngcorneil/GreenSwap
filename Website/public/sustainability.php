@@ -11,7 +11,7 @@
 </head>
     <body>
         <header>
-            <?php require 'navbar.php'; ?> 
+         <?php require __DIR__ . '/../private/templates/navbar.php';?>
 
 
         <div class="container">
@@ -27,6 +27,7 @@
    
 
             <div class="text">
+                <br>
 
                 <h2> How Greenswap Promotes Sustainability</h2>
 
@@ -50,7 +51,8 @@
                     you're contributing to a healthier planet.<br><br>
 
                     Change doesn’t happen overnight, but with every swap, share, and conscious choice, we move closer to a cleaner, greener world — together.<br><br></p>
-            
+        
+        </div>
+        </div>
 
-        </div>
-        </div>
+        <?php require __DIR__ . '/../private/templates/footer.php';?>

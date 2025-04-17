@@ -11,8 +11,8 @@
 </head>
     <body>
         <header>
-            <?php require 'navbar.php'; ?> 
-            <?php require 'functions.php'; ?>
+            <?php require __DIR__ . '/../private/templates/navbar.php';?>
+            <?php require __DIR__ . '/../private/functions.php'; ?>
         </header>
 
         <br>
@@ -59,7 +59,7 @@
     <br>
 
         <footer>
-            <?php require 'footer.php' ?>
+            <?php require __DIR__ . '/../private/templates/footer.php';?>
         </footer>
         
     </body>

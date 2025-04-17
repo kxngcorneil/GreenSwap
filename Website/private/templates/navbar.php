@@ -16,10 +16,21 @@
         </div>
         <ul class="nav-links">
             <li><a href="index.php" class="active"><i class="fas fa-home"></i> Home</a></li>
-            <li><a href=""><i class="fas fa-store"></i> Market</a></li>
+            <li><a href="#"><i class="fas fa-store"></i> Market</a></li>
             <li><a href="sustainability.php"><i class="fas fa-recycle"></i> Sustainability</a></li>
-            <li><a href="Listings.php"><i class="fas fa-list"></i> Listing</a></li>
+            <li class="dropdown">
+                <a href="#"><i class="fas fa-list"></i> Listing <i class="fa-solid fa-caret-down"></i></a>
+                <div class="Listings-Dropdown">
+                    <a href="Listings.php">All Listings</a>
+                    <a href="Plants.php">Plants</a>
+                    <a href="Toys.php">Toys</a>
+                    <a href="#">#</a>
+                    <a href="#">#</a>
+                    <a href="#">#</a>
+                </div>
+            </li>
         </ul>
+
         <div class="search-bar">
             <input type="text" placeholder="Search items or categories">
             <button><i class="fas fa-search"></i></button>

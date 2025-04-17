@@ -25,27 +25,11 @@
 <br>
     <h2> Plants </h2>
     <div class="image-container">
-     <?php getItems("Plant") ?>
+     <?php getAllItems("Plant") ?>
     </div>
-
-    <BR>
-    <bR>
-
-    <h2> Toys </h2>
-    <div class="image-container">
-        <?php getItems("Toys") ?>
-    </div>
-
-    <BR>
-    <bR>
-
-    <h2> Second-Hand Video </h2>
-    <div class="image-container">
-    <?php getItems("Toys") ?>
-    </div>
-
     <br>
     <br>
+
     <?php require __DIR__ . '/../private/templates/footer.php';?>
 
 </body>
