@@ -1,4 +1,5 @@
 <html>
+
 <head>
     <meta charset='utf-8'>
     <meta http-equiv='X-UA-Compatible' content='IE=edge'>
@@ -10,58 +11,62 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300&display=swap" rel="stylesheet">
 </head>
-    <body>
-        <header>
-            <?php require __DIR__ . '/../private/templates/navbar.php';?>
-            <?php require __DIR__ . '/../private/functions.php'; ?>
-        </header>
 
-        <br>
-        <br>
-        <br>
-        <br>
+<body>
+    <header>
+        <?php require __DIR__ . '/../public/templates/navbar.php'; ?>
+        <?php require __DIR__ . '/../private/functions.php'; ?>
+    </header>
 
-        <div class = "image-container-header">
-            <img src="images\Home_Image.jpg">
-            <div class = "Front_page_info">
-                <h1>GreenSwap</h1>
-            
-                <h2> Swap, Save, Sustain, Together</h2>
-                
-                <p> Join the marketplace that turns pre-loved goods into new opportunities with reducing waste.</p>
+    <br>
+    <br>
+    <br>
+    <br>
 
-                <div id = "get-started-button">
-                    <button id = "get-started-button"><a href = "signup.html" id = "get-started-button"> Get Started! </a></button>
-                </div>
+    <div class="image-container-header">
+        <img src="images\Home_Image.jpg">
+        <div class="Front_page_info">
+            <h1>GreenSwap</h1>
 
-                <div id = "browse-listings-button">
-                    <button id = "browse-listings-button"><a href = "#"id = "browse-listings-button"> Browse Listings </a></button>
-                </div>
+            <h2> Swap, Save, Sustain, Together</h2>
+
+            <p> Join the marketplace that turns pre-loved goods into new opportunities with reducing waste.</p>
+
+            <div id="get-started-button">
+                <button id="get-started-button"><a href="signup.html" id="get-started-button"> Get Started!
+                    </a></button>
+            </div>
+
+            <div id="browse-listings-button">
+                <button id="browse-listings-button"><a href="#" id="browse-listings-button"> Browse Listings
+                    </a></button>
             </div>
         </div>
+    </div>
 
-        <br>
-        <br>
+    <br>
+    <br>
 
-        <h1>How It Works</h1>
-        <div class="how-it-works">
-         <?php getHowitWorks() ?>
-        </div>
-        <br>
-        <br>
+    <h1>How It Works</h1>
+    <div class="how-it-works">
+        <?php getHowitWorks() ?>
+    </div>
+    <br>
+    <br>
 
-        <h1><strong>Featured Listings</strong></h1>
+    <h1><strong>Featured Listings</strong></h1>
 
-        <div class="image-container">
+    <div class="image-container">
         <?php getItems('Featured') ?>
     </div>
 
     <br>
     <br>
 
-        <footer>
-            <?php require __DIR__ . '/../private/templates/footer.php';?>
-        </footer>
-        
-    </body>
+
+    <?php require __DIR__ . '/../public/templates/footer.php'; ?>
+
+
+</body>
+
 </html>

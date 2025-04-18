@@ -1,11 +1,11 @@
 <?php
 enum CategoryEnums: string {
-    case Electronics = 'Electronics';
+    case Plants = 'Plants';
+    case Toys = 'Toys';
+    case Outdoorfurniture = 'Outdoor furniture';
     case Indoorfurniture = 'Indoor Furniture';
-    case Outdoorfurniture = 'Outdoor Furniture';
     case Clothing = 'Clothing';
     case Books = 'Books';
-    case Plants = 'Plants';
     case Cars = 'Cars';
 }
 

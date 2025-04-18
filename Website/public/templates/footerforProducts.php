@@ -4,19 +4,19 @@
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="css/footer.css" />
+    <link rel="stylesheet" href="../css/footer.css" />
     <script src="https://kit.fontawesome.com/85df64fd4d.js" crossorigin="anonymous"></script>
     <title>Footer</title>
 </head>
 
 <body>
     <footer>
-        <?php include __DIR__ . '/../database_connection.php'; ?>
+        <?php include __DIR__ . '../../../private/database_connection.php'; ?>
 
         <div class="flex-container">
             <div class="flex1">
                 <div class="footer_logo">
-                    <img src="images/greenswapbanner.png" alt="GreenSwap Logo" />
+                    <img src="../images/greenswapbanner.png" alt="GreenSwap Logo" />
                     <br>
                     <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
                 </div>

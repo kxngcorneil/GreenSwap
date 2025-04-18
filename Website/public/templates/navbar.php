@@ -22,11 +22,13 @@
                 <a href="#"><i class="fas fa-list"></i> Listing <i class="fa-solid fa-caret-down"></i></a>
                 <div class="Listings-Dropdown">
                     <a href="Listings.php">All Listings</a>
-                    <a href="Plants.php">Plants</a>
-                    <a href="Toys.php">Toys</a>
-                    <a href="Second_hand_games.php">Secondhand Games</a>
-                    <a href="#">#</a>
-                    <a href="#">#</a>
+                    <a href="productpages/Plants.php">Plants</a>
+                    <a href="productpages/Toys.php">Toys</a>
+                    <a href="productpages/Indoor_Furniture.php">Indoor Furniture </a>
+                    <a href="productpages/Outdoor_Furniture.php">Outdoor Furniture</a>
+                    <a href="productpages/Clothing.php">Clothing</a>
+                    <a href="productpages/Books.php">Books</a>
+                    <A href="productpages/Cars.php">Cars</A>
                 </div>
             </li>
         </ul>

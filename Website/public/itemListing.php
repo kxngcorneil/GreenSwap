@@ -15,20 +15,27 @@
     <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300&display=swap" rel="stylesheet">
 </head>
 
+
 <body>
+    <header>
+        <?php require __DIR__ . '/../public/templates/navbar.php'; ?>
+        <?php require __DIR__ . '/../private/functions.php'; ?>
+    </header>
 
-<?php 
-require __DIR__ . '/../private/templates/navbar.php'; 
-require __DIR__ . '/../private/functions.php'; 
 
-if (isset($_GET['id'])) {
-    $productID = $_GET['id'];
-    fillInformation($productID);
-} else {
-    echo '<br><br><br><br><br><br><br>';
-    echo "<p>Error: No product ID provided.</p>";
-}
- ?>
+    <?php
+    if (isset($_GET['id'])) {
+        $productID = $_GET['id'];
+        fillInformation($productID);
+    } else {
+        echo '<br><br><br><br><br><br><br>';
+        echo $_get['id'];
+        echo "<p>Error: No product ID provided.</p>";
+    }
+    ?>
 
+
+    <?php require __DIR__ . '/../public/templates/footer.php'; ?>
 </body>
+
 </html>
