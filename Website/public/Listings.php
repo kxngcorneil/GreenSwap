@@ -8,7 +8,7 @@
     <meta name='viewport' content='width=device-width, initial-scale=1'>
     <link rel="icon" type="image" href="/../images/favicon.ico">
     <link rel='stylesheet' type='text/css' media='screen' href='css/listings.css'>
-    <script src='main.js'></script>
+    <script src='../private/functions.js'></script>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300&display=swap" rel="stylesheet">
@@ -32,8 +32,8 @@
         <?php getItems("Plant") ?>
     </div>
 
-    <button onclick="redirectToPlantsPage()">
-        Go to Plants Page
+    <button id="viewMore" onclick="redirect('productpages/Plants.php')">
+        View More
     </button>
 
     <br>
@@ -46,6 +46,10 @@
         <?php getItems("Toys") ?>
     </div>
 
+    <button id="viewMore" onclick="redirect('productpages/Toys.php')">
+        View More
+    </button>
+
     <br>
     <hr>
     <br>
@@ -54,6 +58,10 @@
     <div class="image-container">
     <?php getItems("Toys") ?>
     </div>
+
+    <button id="viewMore" onclick="redirect('productpages/Books.php')">
+        View More
+    </button>
 
     <br>
     <hr>
@@ -64,6 +72,10 @@
     <?php getItems("Toys") ?>
     </div>
 
+    <button id="viewMore" onclick="redirect('productpages/Indoor_Furniture.php')">
+        View More
+    </button>
+
     <br>
     <hr>
     <br>
@@ -72,6 +84,10 @@
     <div class="image-container">
     <?php getItems("Toys") ?>
     </div>
+
+    <button id="viewMore" onclick="redirect('productpages/Outdoor_Furniture.php')">
+        View More
+    </button>
 
     <br>
     <hr>

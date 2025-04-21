@@ -29,7 +29,7 @@
                     <p class="link"><a href="#">About Us</a></p>
                     <p class="link"><a href="#">Contact</a></p>
                     <p class="link"><a href="#">Blog</a></p>
-                    <p class="link"><a href="#">Listings</a></p>
+                    <p class="link"><a href="Listings.php">Listings</a></p>
                 </div>
             </div>
 

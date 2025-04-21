@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Navbar</title>
     <link rel="stylesheet" href="css\navbar.css">
+    <script src='../private/functions.js'></script>
     <script src="https://kit.fontawesome.com/85df64fd4d.js" crossorigin="anonymous"></script>
 </head>
 
@@ -33,10 +34,17 @@
             </li>
         </ul>
 
+
+        <!-- Searchbar - Take all product names and allow the user to search -->
         <div class="search-bar">
             <input type="text" placeholder="Search items or categories">
+            <ul id="list">
+                <li class="product"><a href="itemListing.php?id=10">Test</a></li>
+            </ul>
             <button><i class="fas fa-search"></i></button>
         </div>
+
+        
         <?php if (isset($_SESSION['Active']) && $_SESSION['Active'] === false) {
             echo '<div class="nav-buttons">';
             echo '<button class="join"><a href="signup.html">Get Started</a></button>';

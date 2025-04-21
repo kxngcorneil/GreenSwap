@@ -80,6 +80,22 @@
     color: green;
 }
 
+.search-bar ul#list{
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.search-bar li.product{
+    font-size: 1.2em;
+    padding: 10px;
+    border-bottom: 1px solid black;
+}
+
+.search-bar li.product:last-child{
+    border-bottom: none;
+}
+
 .nav-buttons {
     display: flex;
     gap: 10px;

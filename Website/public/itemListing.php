@@ -8,7 +8,6 @@
     <meta name='viewport' content='width=device-width, initial-scale=1'>
     <link rel="icon" type="image" href="./images/favicon.ico">
     <link rel='stylesheet' type='text/css' media='screen' href='css/itemListing.css'>
-    <script src='main.js'></script>
     <script src="https://kit.fontawesome.com/85df64fd4d.js" crossorigin="anonymous"></script>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>

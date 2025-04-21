@@ -4,7 +4,7 @@
 <head>
     <meta charset='utf-8'>
     <meta http-equiv='X-UA-Compatible' content='IE=edge'>
-    <title>Item</title>
+    <title>Book Listings - Greenswap</title>
     <meta name='viewport' content='width=device-width, initial-scale=1'>
     <link rel='stylesheet' type='text/css' media='screen' href='../css/listings.css'>
     <link rel='stylesheet' type='text/css' media='screen' href='../css/navbar.css'>
@@ -27,7 +27,7 @@
 
     <h2>Books</h2>
     <div class="image-container">
-        <?php getAllItems("Plant"); ?>
+        <?php getAllItems("Book"); ?>
     </div>
 
     <br><br>
