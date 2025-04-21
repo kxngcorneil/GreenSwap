@@ -21,21 +21,29 @@
         <?php require __DIR__ . '/../public/templates/navbar.php'; ?>
         <?php require __DIR__ . '/../private/functions.php'; ?>
     </header>
+    <br>
+         <br>
+         <br>
+         <br>
+         <br>
+         <?php 
+         if (isset($_GET['id'])){
+            $productID = $_GET['id'];
+            fillInformation($productID);
+         }
+         else{
+            echo 'No Product ID Found';
+         }
+         ?>
+    
 
-
-    <?php
-    if (isset($_GET['id'])) {
-        $productID = $_GET['id'];
-        fillInformation($productID);
-    } else {
-        echo '<br><br><br><br><br><br><br>';
-        echo $_get['id'];
-        echo "<p>Error: No product ID provided.</p>";
-    }
-    ?>
-
-
-    <?php require __DIR__ . '/../public/templates/footer.php'; ?>
+    <br>
+         <br>
+         <br>
+         <br>
+         <br>
+         <br> 
 </body>
 
+<?php require __DIR__ . '/../public/templates/footer.php'; ?>
 </html>

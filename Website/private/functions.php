@@ -1,8 +1,10 @@
 <?php
 function getItems($categoryName) {
         include __DIR__ . '/../private/database_connection.php';
-        $sql = "SELECT product_id,product_name, product_desc, price, product_image_link FROM products WHERE product_category = '$categoryName' LIMIT 12;";
-        $result = $conn->query($sql);
+        $stmt =  $conn -> prepare ("SELECT product_id,product_name, product_desc, price, product_image_link FROM products WHERE product_category = ? LIMIT 12;");
+        $stmt -> bind_Param("s", $categoryName);
+        $stmt -> execute();
+        $result = $stmt -> get_result();
 
         if ($result->num_rows > 0) {
             while ($row = $result->fetch_assoc()) {
@@ -49,13 +51,16 @@ function getHowitWorks() {
 <?php
 function getAllItems($categoryName) {
         include __DIR__ . '/../private/database_connection.php';
-        $sql = "SELECT product_id,product_name, product_desc, price, product_image_link FROM products WHERE product_category = '$categoryName';";
-        $result = $conn->query($sql);
+        $sql = "SELECT product_id,product_name, product_desc, price, product_image_link FROM products WHERE product_category = ?";
+        $stmt =  $conn -> prepare($sql);
+        $stmt -> bind_param("s", $categoryName);
+        $stmt -> execute();
+        $result = $stmt -> get_result();
 
         if ($result->num_rows > 0) {
             while ($row = $result->fetch_assoc()) {
                 echo '<div class="image-box">
-                        <img src=" ..\images\productimages' . $row["product_image_link"] . '" width="290" height="240" alt="' . $row["product_name"] . '">
+                        <img src=" ..\images\productimages' . $row["product_image_link"]. '" width="290" height="240" alt="' . $row["product_name"]. '">
                         <h3>' . $row["product_name"] . '</h3> 
                         <p>' . $row["product_desc"] . '</p>
                         <div class="buy">
@@ -88,48 +93,60 @@ function fillInformation($productID) {
 
     if ($result->num_rows > 0) {
         while ($row = $result->fetch_assoc()) {
-            echo '
-            <div class="item-container">
-                <div class="left-content">
-                    <img src="' . $row['product_image_link'] . '" width="550" height="550" alt="Product Image">
+        echo '
+        <div class = "left-content">
+            <img src=" images\productimages' . $row["product_image_link"]. '" width="290" height="240" alt="' . $row["product_name"]. '">
+            <br>
+            <br>
+        </div>
+
+
+        <div class="right-content"> 
+            <div class="text">
+                <h2 class = itemName>'. $row["product_name"] . '</h2>
+
+                <p class="itemPrice">€' . number_format($row["price"], 2) . '</p>
+
+                <div class="desc">
+                    <p> '. $row["product_desc"] . '</p>
                 </div>
 
-                <div class="right-content">
-                    <div class="text">
-                        <h2><strong>' . $row['product_name'] . '</strong></h2>
-                        <p class="price"><strong>€' . number_format($row['price'], 2) . '</strong></p> 
-                        <div class="desc">
-                            <p>' . $row['product_desc'] . '</p> 
-                            <div class="item-info">
-                                <table>
-                                    <tr>
-                                        <td><i class="fa-solid fa-layer-group"></i></td>
-                                        <td>' . $row['product_category'] . '</td>
-                                    </tr>
-                                    <tr>
-                                        <td><i class="fa-solid fa-location-dot"></i></td>
-                                        <td><!-- TODO: Location --></td> 
-                                    </tr>
-                                    <tr>
-                                        <td><i class="fa-solid fa-truck"></i></td>
-                                        <td><!-- TODO: Delivery --></td> 
-                                    </tr>
-                                    <tr>
-                                        <td><i class="fa-solid fa-arrow-right-arrow-left"></i></td>
-                                        <td><!-- TODO: Returns --></td> 
-                                    </tr>
-                                </table>
-                            </div>
-                            <div class="buy-button">
-                                <a href="itemListing.php?id=2">
-                                    <button><h3>Buy</h3></button>
-                                </a>
-                            </div>
-                        </div>
-                    </div>
+                <div class= Iteminfo>        
+                    <table>
+                        <tr>
+                            <td>
+                                <i class="fa-solid fa-layer-group"></i>
+                            </td>
+                            <td> Category </td>
+                            <td>'. $row['product_category'] .' </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <i class="fa-solid fa-location-dot"></i>
+                            </td>
+                            <td> Location </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <i class="fa-solid fa-truck"></i>
+                            </td>
+                            <td> Delivery Method </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <i class="fa-solid fa-arrow-right-arrow-left"></i>
+                            </td>
+                            <td> Item Swap </td>
+                        </tr>
+                    </table>
                 </div>
-            </div>';
+
+            <div>   
+                <p class="buy"><strong>ADD TO CART</strong></p>
+            </div>
+</div>';
         }
+
     } else {
         echo "<p>Product not found.</p>";
     }
@@ -139,4 +156,5 @@ function fillInformation($productID) {
 }
 
 ?>
+
    
