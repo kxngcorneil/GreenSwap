@@ -18,6 +18,11 @@
     <input type="text" name="productPrice" id="productPrice" required>
     <br>
     <br>
+
+    <label for="productDesc">Product Description: </label>
+    <input type="text" name="productDesc" id="productDesc" required>
+    <br>
+    <br>
     
     <label for="productImages">Product Image</label>
     <input type="file" name="productImages" id="productImages" required>
@@ -25,8 +30,8 @@
     <br>
     <br>
     
-    <label for="productCategoy">Category</label>
-    <select for="category" name="category">
+    <label for="productCategory">Category</label>
+    <select for="productCategory" name="productCategory">
         <option value="Books"> Books </option>
         <option value="Toys"> Toys </option>
         <option value="Clothing"> Clothing </option>
