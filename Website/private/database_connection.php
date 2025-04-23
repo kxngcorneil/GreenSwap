@@ -1,16 +1,15 @@
 <?php
-
-
-$servername = "127.0.0.1";
+/**
+* Configuration for database connection
+*
+*/
+$servername = "localhost";
 $username = "root";
-$password = ""; 
-$database = "greenswap";
+$password = "";
+$dbname = "greenswap";
 
-// Create connection
-$conn = new mysqli($servername, $username, $password, $database);
-
-// Check connection
-if ($conn->connect_error) {
-    die("Connection failed: " . $conn->connect_error);
-} 
+$dsn = "mysql:host=$servername;dbname=$dbname";
+$options = array(
+PDO::ATTR_ERRMODE => PDO::ERRMODE_EXCEPTION
+);
 ?>
