@@ -20,7 +20,7 @@ fas fa-store
             <li class="dropdown">
                 <a href="#"><i class="fas fa-list"></i> Market <i class="fa-solid fa-caret-down"></i></a>
                 <div class="Listings-Dropdown">
-                    <a href="../Listings.php">All Listings</a>
+                    <a href="../Marketplace.php">All Listings</a>
                     <a href="Plants.php">Plants</a>
                     <a href="Toys.php">Toys</a>
                     <a href="Indoor_Furniture.php">Indoor Furniture </a>
@@ -29,7 +29,7 @@ fas fa-store
                     <a href="Books.php">Books</a>
                     <A href="Cars.php">Cars</A>
                 </div>
-            <li><a href="sustainability.php"><i class="fas fa-recycle"></i> Sustainability</a></li>
+            <li><a href="../sustainability.php"><i class="fas fa-recycle"></i> Sustainability</a></li>
             <li class="dropdown">
                 <a href="#"><i class="fas fa-list"></i> Listing <i class="fa-solid fa-caret-down"></i></a>
                 <div class="Listings-Dropdown">

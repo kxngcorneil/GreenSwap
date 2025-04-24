@@ -7,7 +7,7 @@
     <title>Item</title>
     <meta name='viewport' content='width=device-width, initial-scale=1'>
     <link rel="icon" type="image" href="/../images/favicon.ico">
-    <link rel='stylesheet' type='text/css' media='screen' href='css/listings.css'>
+    <link rel='stylesheet' type='text/css' media='screen' href='css/marketplace.css'>
     <script src='../private/functions.js'></script>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -32,9 +32,11 @@
         <?php getItems("Plant") ?>
     </div>
 
-    <button id="viewMore" onclick="redirect('productpages/Plants.php')">
-        View More
-    </button>
+    <div class="view-more-button">
+        <button onclick="redirect('productpages/Plants.php')">
+            View More
+        </button>
+    </div>
 
     <br>
     <hr>
@@ -43,12 +45,14 @@
 
     <h2> Toys </h2>
     <div class="image-container">
-        <?php getItems("Toys") ?>
+        <?php getItems("Toy") ?>
     </div>
 
-    <button id="viewMore" onclick="redirect('productpages/Toys.php')">
-        View More
-    </button>
+    <div class="view-more-button">
+        <button onclick="redirect('productpages/Toys.php')">
+            View More
+        </button>
+    </div>
 
     <br>
     <hr>
@@ -56,12 +60,14 @@
 
     <h2> Books </h2>
     <div class="image-container">
-    <?php getItems("Toys") ?>
+    <?php getItems("Book") ?>
     </div>
 
-    <button id="viewMore" onclick="redirect('productpages/Books.php')">
-        View More
-    </button>
+    <div class="view-more-button">
+        <button onclick="redirect('productpages/Books.php')">
+            View More
+        </button>
+    </div>
 
     <br>
     <hr>
@@ -69,12 +75,14 @@
 
     <h2> Indoor Furniture </h2>
     <div class="image-container">
-    <?php getItems("Toys") ?>
+    <?php getItems("Indoor_Furniture") ?>
     </div>
 
-    <button id="viewMore" onclick="redirect('productpages/Indoor_Furniture.php')">
-        View More
-    </button>
+    <div class="view-more-button">
+        <button onclick="redirect('productpages/Indoor_Furniture.php')">
+            View More
+        </button>
+    </div>
 
     <br>
     <hr>
@@ -82,17 +90,14 @@
 
     <h2> Outdoor Furniture </h2>
     <div class="image-container">
-    <?php getItems("Toys") ?>
+    <?php getItems("Outdoor_Furniture") ?>
     </div>
 
-    <button id="viewMore" onclick="redirect('productpages/Outdoor_Furniture.php')">
-        View More
-    </button>
-
-    <br>
-    <hr>
-    <br>
-
+    <div class="view-more-button">
+        <button onclick="redirect('productpages/Outdoor_Furniture.php')">
+            View More
+        </button>
+    </div>
 
     <?php require __DIR__ . '/../public/templates/footer.php'; ?>
 
