@@ -26,14 +26,15 @@
          <br>
          <br>
          <?php 
-         if (isset($_GET['id'])){
-            $productID = $_GET['id'];
-            fillInformation($productID);
-         }
-         else{
-            echo 'No Product ID Found';
-         }
-         ?>
+if (isset($_GET['id'])) {
+    $productID = $_GET['id'];
+    fillInformation($productID);
+}
+else {
+    $productID = 3; // Default to product ID 3
+    fillInformation($productID);
+}
+?>
     
 
     <br>
