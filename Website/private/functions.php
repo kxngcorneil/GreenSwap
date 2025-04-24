@@ -116,7 +116,7 @@ function fillInformation($productID)
 
     try {
         $conn = new PDO($dsn, $username, $password, $options);
-        $sql = "SELECT product_id, product_name, product_desc, price, product_image_link, product_category FROM products WHERE product_id = ?";
+        $sql = "SELECT product_id, product_name, product_desc, price, product_image_link, product_category, is_swapable FROM products WHERE product_id = ?";
         $stmt = $conn->prepare($sql);
         $stmt->bindParam(1, $productID, PDO::PARAM_STR);
         $stmt->execute();
@@ -125,7 +125,7 @@ function fillInformation($productID)
 
         foreach ($Product as $row) {
             echo '<div class = "left-content">
-            <img src=" images\productimages' . $row["product_image_link"] . '" width="290" height="240" alt="' . $row["product_name"] . '">
+            <img id="imagebox" src=" images\productimages' . $row["product_image_link"] . '" width="290" height="240" alt="' . $row["product_name"] . '">
             <br>
             <br>
         </div>
@@ -133,15 +133,15 @@ function fillInformation($productID)
 
         <div class="right-content"> 
             <div class="text">
-                <h2 class = itemName>' . $row["product_name"] . '</h2>
+                <h2>' . $row["product_name"] . '</h2>
 
-                <p class="itemPrice">€' . number_format($row["price"], 2) . '</p>
+                <p>€' . number_format($row["price"], 2) . '</p>
 
                 <div class="desc">
                     <p> ' . $row["product_desc"] . '</p>
                 </div>
 
-                <div class= Iteminfo>        
+                <div class= item-info>        
                     <table>
                         <tr>
                             <td>
@@ -154,27 +154,36 @@ function fillInformation($productID)
                             <td>
                                 <i class="fa-solid fa-location-dot"></i>
                             </td>
-                            <td> Location </td>
+                            <td> Location </td>' .// To be added
+                            '<td> </td>
                         </tr>
                         <tr>
                             <td>
                                 <i class="fa-solid fa-truck"></i>
                             </td>
-                            <td> Delivery Method </td>
+                            <td> Delivery Method </td>' .// To be added
+                            '<td> </td>
                         </tr>
                         <tr>
                             <td>
                                 <i class="fa-solid fa-arrow-right-arrow-left"></i>
                             </td>
                             <td> Item Swap </td>
-                        </tr>
-                    </table>
-                </div>
-
-            <div>   
-                <p class="buy"><strong>ADD TO CART</strong></p>
+                            <td>';
+            if ($row['is_swapable'] == true) {
+                echo 'Item Swap Available';
+            } else {
+                echo 'Item Swap Not Available';
+            }
+            echo '</td>
+                    </tr>
+                </table>
             </div>
-</div>';
+
+        <div>   
+            <p class="buy"><strong>ADD TO CART</strong></p>
+        </div>
+    </div>';
         }
     } catch (PDOException $e) {
         echo "Database error: " . $e->getMessage();
