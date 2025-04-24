@@ -1,3 +1,4 @@
+<?PHP session_start() ?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -20,7 +21,7 @@ fas fa-store
             <li class="dropdown">
                 <a href="#"><i class="fas fa-list"></i> Market <i class="fa-solid fa-caret-down"></i></a>
                 <div class="Listings-Dropdown">
-                    <a href="Listings.php">All Listings</a>
+                    <a href="Marketplace.php">All Products</a>
                     <a href="productpages/Plants.php">Plants</a>
                     <a href="productpages/Toys.php">Toys</a>
                     <a href="productpages/Indoor_Furniture.php">Indoor Furniture </a>
