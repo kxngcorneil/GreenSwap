@@ -22,7 +22,7 @@ function getItems($categoryName)
         foreach ($Product as $row) {
             echo ' 
                     <div class="image-box">
-                        <img src=" images\productimages' . $row["product_image_link"] . '" width="290" height="240" alt="' . $row["product_name"] . '">
+                        <img src="'. $row["product_image_link"] . '" width="290" height="240" alt="' . $row["product_name"] . '">
                         <h3>' . $row["product_name"] . '</h3> 
                         <p>' . $row["product_desc"] . '</p>
                         <div class="buy">
@@ -86,7 +86,7 @@ function getAllItems($categoryName)
 
         foreach ($Product as $row) {
             echo '<div class="image-box">
-                        <img src=" ..\images\productimages' . $row["product_image_link"] . '" width="290" height="240" alt="' . $row["product_name"] . '">
+                        <img src=" ../'. $row["product_image_link"] . '" width="290" height="240" alt="' . $row["product_name"] . '">
                         <h3>' . $row["product_name"] . '</h3> 
                         <p>' . $row["product_desc"] . '</p>
                         <div class="buy">
@@ -116,7 +116,7 @@ function fillInformation($productID)
 
     try {
         $conn = new PDO($dsn, $username, $password, $options);
-        $sql = "SELECT product_id, product_name, product_desc, price, product_image_link, product_category, is_swapable, delivery_method, product_condition, product_stock FROM products WHERE product_id = ?";
+        $sql = "SELECT product_id, product_name, product_desc, price, product_image_link, product_category, is_swapable, delivery_method, product_condition, product_stock, created_by FROM products WHERE product_id = ?";
         $stmt = $conn->prepare($sql);
         $stmt->bindParam(1, $productID, PDO::PARAM_STR);
         $stmt->execute();
@@ -125,7 +125,7 @@ function fillInformation($productID)
 
         foreach ($Product as $row) {
             echo '<div class = "left-content">
-            <img id="imagebox" src=" images\productimages' . $row["product_image_link"] . '" width="290" height="240" alt="' . $row["product_name"] . '">
+            <img id="imagebox" src="'. $row["product_image_link"] . '" width="290" height="240" alt="' . $row["product_name"] . '">
             <br>
             <br>
         </div>
@@ -155,7 +155,7 @@ function fillInformation($productID)
                                 <i class="fa-solid fa-location-dot"></i>
                             </td>
                             <td> Location </td> 
-                            <td>'; if($row['user_location'] == null){
+                            <td>'; if(@$row['user_location'] == null){
                                 echo 'No Location Provided';
                             } else {
                                 echo $row['user_location'];
@@ -199,6 +199,7 @@ function fillInformation($productID)
                                 <i class="fa-solid fa-user"></i>
                             </td>
                             <td> Posted By </td>
+                            <td>' . $row['created_by'] .' </td>
                     </tr>
                     <tr>
                             <td>

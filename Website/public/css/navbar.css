@@ -126,7 +126,8 @@ a{
 }
 
 .dropdown {
-    position: relative;
+    position: static;
+    list-style: none;
 }
 
 .Listings-Dropdown {
@@ -139,6 +140,7 @@ a{
     min-width: 200px;
     box-shadow: 0px 8px 16px rgba(0,0,0,0.2);
     z-index: 10;
+    
 }
 
 .Listings-Dropdown a {
@@ -154,6 +156,10 @@ a{
 
 .dropdown:hover .Listings-Dropdown {
     display: block;
+}
+
+.username{
+    margin-right: 30px;
 }
 
   

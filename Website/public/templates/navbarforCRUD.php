@@ -7,28 +7,27 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Navbar</title>
     <link rel="stylesheet" href="css/navbar.css">
-    <script src='../private/functions.js'></script>
     <script src="https://kit.fontawesome.com/85df64fd4d.js" crossorigin="anonymous"></script>
 </head>
 
 <body>
     <nav class="navbar">
         <div class="logo">
-            <img src="images/logo_whitebackground.png" alt="GreenSwap Logo">
+            <img src="../../public/images/greenswap.png" alt="GreenSwap Logo">
         </div>
         <ul class="nav-links">
             <li><a href="index.php" class="active"><i class="fas fa-home"></i> Home</a></li>
             <li class="dropdown">
                 <a href="#"><i class="fas fa-list"></i> Market <i class="fa-solid fa-caret-down"></i></a>
                 <div class="Listings-Dropdown">
-                    <a href="Marketplace.php">All Products</a>
-                    <a href="productpages/Plants.php">Plants</a>
-                    <a href="productpages/Toys.php">Toys</a>
-                    <a href="productpages/Indoor_Furniture.php">Indoor Furniture</a>
-                    <a href="productpages/Outdoor_Furniture.php">Outdoor Furniture</a>
-                    <a href="productpages/Clothing.php">Clothing</a>
-                    <a href="productpages/Books.php">Books</a>
-                    <a href="productpages/Cars.php">Cars</a>
+                    <a href="../../public/Marketplace.php">All Products</a>
+                    <a href="../../public/productpages/Plants.php">Plants</a>
+                    <a href="../../public/productpages/Toys.php">Toys</a>
+                    <a href="../../public/productpages/Indoor_Furniture.php">Indoor Furniture</a>
+                    <a href="../../public/productpages/Outdoor_Furniture.php">Outdoor Furniture</a>
+                    <a href="../../public/productpages/Clothing.php">Clothing</a>
+                    <a href="../../public/productpages/Books.php">Books</a>
+                    <a href="../../public/productpages/Cars.php">Cars</a>
                 </div>
             </li>
             <li><a href="sustainability.php"><i class="fas fa-recycle"></i> Sustainability</a></li>

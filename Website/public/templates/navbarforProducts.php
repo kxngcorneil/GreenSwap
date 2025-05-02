@@ -1,3 +1,4 @@
+<?PHP session_start() ?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -47,19 +48,19 @@ fas fa-store
             <button><i class="fas fa-search"></i></button>
         </div>
 
-        
-        <?php if (isset($_SESSION['Active']) && $_SESSION['Active'] === false) {
-            echo '<div class="nav-buttons">';
-            echo '<button class="join"><a href="signup.html">Get Started</a></button>';
-            echo '<button class="login"><a href="login.html">Login</a></button>';
-            echo '</div>';
-        } elseif (isset($_SESSION['Active']) && $_SESSION['Active'] === true) {
-            echo '<h2>Welcome, ' . htmlspecialchars($_SESSION['username']) . '!</h2>';
+        <?php
+        if (isset($_SESSION['Active']) && $_SESSION['Active'] === true) {
+            echo '<li class="dropdown">
+                    <p class="username">Welcome, ' . htmlspecialchars($_SESSION['Username']) . '! <i class="fa-solid fa-caret-down"></i></p>
+                    <div class="Listings-Dropdown">
+                        <a href="Logout.php">Logout</a>
+                    </div>
+                </li>';
         } else {
-            echo '<div class="nav-buttons">';
-            echo '<button class="join"><a href="signup.html">Get Started</a></button>';
-            echo '<button class="login"><a href="login.html">Login</a></button>';
-            echo '</div>';
+            echo '<div class="nav-buttons">
+                    <button class="join"><a href="signup.html">Get Started</a></button>
+                    <button class="login"><a href="login.php">Login</a></button>
+                 </div>';
         }
         ?>
     </nav>
