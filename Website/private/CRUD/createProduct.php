@@ -21,7 +21,6 @@ try {
             "productName" => $_POST["productName"],
             "productPrice" => $_POST["productPrice"],
             "productDesc" => $_POST["productDesc"],
-            // ✅ Use relative path for browser
             "productImage" => 'images/productImages/' . $imageName,
             "productCategory" => $_POST["productCategory"],
             "deliveryMethod" => $_POST["deliveryMethod"]
@@ -48,7 +47,7 @@ try {
 
 </html>
 
-<br><br><br><br><br><br><br><br><br>
+<br><br><br><br><br>
 
 
 <h2>Create a new Product</h2>

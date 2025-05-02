@@ -148,7 +148,16 @@ function fillInformation($productID)
                                 <i class="fa-solid fa-layer-group"></i>
                             </td>
                             <td> Category </td>
-                            <td>' . $row['product_category'] . ' </td>
+                            <td>';  if($row['product_category'] == "Indoor_Furniture"){
+                                echo 'Indoor Furniture';
+                            } elseif ($row['product_category'] == "Outdoor_Furniture"){ 
+                                echo 'Outdoor Furniture';
+                            }
+                            else {
+                                echo $row['product_category'];
+
+                            }
+                            echo ' </td>
                         </tr>
                         <tr>
                             <td>
@@ -241,7 +250,7 @@ function getFeaturedItems()
 
         foreach ($Product as $row) {
             echo '<div class="image-box">
-                            <img src=" images\productimages' . $row["product_image_link"] . '" width="290" height="240" alt="' . $row["product_name"] . '">
+                            <img src="' . $row["product_image_link"] . '" width="290" height="240" alt="' . $row["product_name"] . '">
                             <h3>' . $row["product_name"] . '</h3> 
                             <p>' . $row["product_desc"] . '</p>
                             <div class="buy">

@@ -11,8 +11,6 @@
 
 <body>
     <footer>
-        <?php include __DIR__ . '../../../private/database_connection.php'; ?>
-
         <div class="flex-container">
             <div class="flex1">
                 <div class="footer_logo">

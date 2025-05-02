@@ -16,7 +16,7 @@
             <img src="../../public/images/greenswap.png" alt="GreenSwap Logo">
         </div>
         <ul class="nav-links">
-            <li><a href="index.php" class="active"><i class="fas fa-home"></i> Home</a></li>
+            <li><a href="../../public/index.php" class="active"><i class="fas fa-home"></i> Home</a></li>
             <li class="dropdown">
                 <a href="#"><i class="fas fa-list"></i> Market <i class="fa-solid fa-caret-down"></i></a>
                 <div class="Listings-Dropdown">
@@ -30,11 +30,11 @@
                     <a href="../../public/productpages/Cars.php">Cars</a>
                 </div>
             </li>
-            <li><a href="sustainability.php"><i class="fas fa-recycle"></i> Sustainability</a></li>
+            <li><a href="s../../public/sustainability.php"><i class="fas fa-recycle"></i> Sustainability</a></li>
             <li class="dropdown">
                 <a href="#"><i class="fas fa-list"></i> Listing <i class="fa-solid fa-caret-down"></i></a>
                 <div class="Listings-Dropdown">
-                    <a href='../../Website/private/CRUD/createProduct.php'>List New Product</a>
+                    <a href='createProduct.php'>List New Product</a>
                     <a href="#">Edit Existing Product</a>
                     <a href="#">Delete Existing Product</a>
                 </div>

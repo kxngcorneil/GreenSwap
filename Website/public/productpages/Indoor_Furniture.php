@@ -27,7 +27,7 @@
 
     <h2>Indoor Furniture</h2>
     <div class="image-container">
-        <?php getAllItems("Plant"); ?>
+        <?php getAllItems("Indoor_Furniture"); ?>
     </div>
 
     <br><br>
