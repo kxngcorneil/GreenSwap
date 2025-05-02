@@ -116,7 +116,7 @@ function fillInformation($productID)
 
     try {
         $conn = new PDO($dsn, $username, $password, $options);
-        $sql = "SELECT product_id, product_name, product_desc, price, product_image_link, product_category, is_swapable FROM products WHERE product_id = ?";
+        $sql = "SELECT product_id, product_name, product_desc, price, product_image_link, product_category, is_swapable, delivery_method, product_condition, product_stock FROM products WHERE product_id = ?";
         $stmt = $conn->prepare($sql);
         $stmt->bindParam(1, $productID, PDO::PARAM_STR);
         $stmt->execute();
@@ -154,15 +154,32 @@ function fillInformation($productID)
                             <td>
                                 <i class="fa-solid fa-location-dot"></i>
                             </td>
-                            <td> Location </td>' .// To be added
-                            '<td> </td>
+                            <td> Location </td> 
+                            <td>'; if($row['user_location'] == null){
+                                echo 'No Location Provided';
+                            } else {
+                                echo $row['user_location'];
+                            }
+                            echo '
+                        </tr>
+                        <tr>
+                            <td>
+                                <i class="fa-solid fa-ranking-star"></i>
+                            </td>
+                            <td> Item Condition </td> 
+                            <td>'; if($row['product_condition'] == null){
+                                echo 'No Condition Provided';
+                            } else {
+                                echo $row['product_condition'];
+                            }
+                            echo '</td>
                         </tr>
                         <tr>
                             <td>
                                 <i class="fa-solid fa-truck"></i>
                             </td>
-                            <td> Delivery Method </td>' .// To be added
-                            '<td> </td>
+                            <td> Delivery Method </td>
+                            <td>' . $row['delivery_method'] . ' </td>
                         </tr>
                         <tr>
                             <td>
@@ -177,6 +194,19 @@ function fillInformation($productID)
             }
             echo '</td>
                     </tr>
+                    <tr>
+                            <td> 
+                                <i class="fa-solid fa-user"></i>
+                            </td>
+                            <td> Posted By </td>
+                    </tr>
+                    <tr>
+                            <td>
+                                <i class="fa-solid fa-boxes-stacked"></i>
+                            </td>
+                            <td> Stock Avaliable </td>
+                            <td>' . $row['product_stock'] . ' </td>
+                        </tr>
                 </table>
             </div>
 

@@ -6,7 +6,7 @@
     <meta http-equiv='X-UA-Compatible' content='IE=edge'>
     <title>Plant Listings - Greenswap</title>
     <meta name='viewport' content='width=device-width, initial-scale=1'>
-    <link rel='stylesheet' type='text/css' media='screen' href='../css/listings.css'>
+    <link rel='stylesheet' type='text/css' media='screen' href='../css/marketplace.css'>
     <link rel='stylesheet' type='text/css' media='screen' href='../css/navbar.css'>
     <link rel='stylesheet' type='text/css' media='screen' href='../css/footer.css'>
     <script src='../main.js'></script>
