@@ -40,6 +40,11 @@ $total = $subtotal + $shipping;
 </head>
 <body>
     <?php require __DIR__ . '/templates/navbar.php'; ?>
+
+    <br>
+    <br>
+    <br>
+    <br>
     
     <div class="cart-container">
         <div class="cart-left">

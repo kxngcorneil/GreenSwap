@@ -33,12 +33,12 @@
             <p> Join the marketplace that turns pre-loved goods into new opportunities with reducing waste.</p>
 
             <div id="get-started-button">
-                <button id="get-started-button"><a href="signup.html" id="get-started-button"> Get Started!
+                <button id="get-started-button"><a href="signup.php" id="get-started-button"> Get Started!
                     </a></button>
             </div>
 
             <div id="browse-listings-button">
-                <button id="browse-listings-button"><a href="#" id="browse-listings-button"> Browse Listings
+                <button id="browse-listings-button"><a href="marketplace.php" id="browse-listings-button"> Browse Listings
                     </a></button>
             </div>
         </div>

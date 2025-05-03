@@ -42,7 +42,7 @@ fas fa-store
         </ul>
 
 
-        <!-- Searchbar - Take all product names and allow the user to search -->
+        <!-- TODO Searchbar - Take all product names and allow the user to search -->
         <div class="search-bar">
             <input type="text" placeholder="Search items or categories">
             <button><i class="fas fa-search"></i></button>
@@ -51,14 +51,14 @@ fas fa-store
         <?php
         if (isset($_SESSION['Active']) && $_SESSION['Active'] === true) {
             echo '<li class="dropdown">
-                    <p class="username">Welcome, ' . htmlspecialchars($_SESSION['Username']) . '! <i class="fa-solid fa-caret-down"></i></p>
+                    <p class="username">Welcome, ' . htmlspecialchars($_SESSION['FirstName']) . '! <i class="fa-solid fa-caret-down"></i></p>
                     <div class="Listings-Dropdown">
                         <a href="Logout.php">Logout</a>
                     </div>
                 </li>';
         } else {
             echo '<div class="nav-buttons">
-                    <button class="join"><a href="signup.html">Get Started</a></button>
+                    <button class="join"><a href="signup.php">Get Started</a></button>
                     <button class="login"><a href="login.php">Login</a></button>
                  </div>';
         }

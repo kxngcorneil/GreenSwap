@@ -16,8 +16,9 @@ if (isset($_POST['submit'])) {
 
         $user = $stmt->fetch(PDO::FETCH_ASSOC);
 
-        if ($user) {
-            $_SESSION['Username'] = $user['user_firstname'];
+        if ($user && password_verify($inputPassword, $user['user_password'])) {
+            $_SESSION['Username'] = $user['username'];
+            $_SESSION['FirstName'] = $user['user_firstname'];
             $_SESSION['UserID'] = $user['account_id'];
             $_SESSION['Active'] = true;
 
@@ -54,7 +55,7 @@ if (isset($_POST['submit'])) {
 
         <div class="button">
             <button type="submit" name="submit" class="signupbtn">Log In</button>
-            <button class="newuser"><a href="register.php" class="newuser">New User?</a></button>
+            <button class="newuser"><a href="signup.php" class="newuser">New User?</a></button>
             <button class="newuser"><a href="index.php" class="newuser" >Return to Homepage</a></button>
         </div>
 
