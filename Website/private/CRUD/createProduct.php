@@ -1,3 +1,4 @@
+
 <?php require __DIR__ . '../../../public/templates/navbarforCRUD.php'; ?>
 <?php
 
@@ -57,6 +58,9 @@ try {
     <link rel='stylesheet' type='text/css' media='screen' href='css/navbar.css'>
     <link rel='stylesheet' type='text/css' media='screen' href='css/footer.css'>
     <link rel="icon" type="image" href="images/favicon.ico">
+    <meta charset="UTF-8">
+    <title>Create Listing</title>
+    <link rel='stylesheet' href='css/createProduct.css'>
 </head>
 
 </html>
@@ -107,7 +111,7 @@ try {
     </select>
     <br><br>
 
-    <lable for="isSwapable"> Do you wish to Swap your Item?</lable>
+    <label for="isSwapable"> Do you wish to Swap your Item?</label>
     <input type="checkbox" name="isSwapable" id="isSwapable">
     <br><br>
 
