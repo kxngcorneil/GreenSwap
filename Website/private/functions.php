@@ -284,10 +284,43 @@ function getProductsforSearchbar()
     $result = $stmt->get_result();
     if ($result->num_rows > 0) {
         while ($row = $result->fetch_assoc()) {
-            echo '<li class="product"><a href="..\itemListing.php?id=' . $row["product_id"] . '"></a>' . $row["Product_name"] . "</li>";
+            echo '<li class="product"><a href = "itemListing.php?id=' . $row["product_id"] . '"></a>' . $row["Product_name"] . "</li>";
         }
     }
     ;
+}
+
+function getUserItems() {
+
+
+    include __DIR__ . '/../private/database_connection.php';
+    $user = $_SESSION['Username'];
+
+    try {
+        $conn = new PDO($dsn, $username, $password, $options);
+
+        $sql = "SELECT product_id, product_name, product_image_link, createdOn FROM products WHERE created_by = :user";
+        $stmt = $conn->prepare($sql);
+        $stmt->bindParam(':user', $user, PDO::PARAM_STR);
+        $stmt->execute();
+
+        $products = $stmt->fetchAll(PDO::FETCH_ASSOC);
+
+        foreach ($products as $row) {
+            echo '<tr>
+                <td><img src="' . htmlspecialchars($row['product_image_link']) . '" alt="Product Image" class="product-image"></td>
+                <td>' . htmlspecialchars($row['product_name']) . '</td>
+                <td>' . htmlspecialchars($row['createdOn']) . '</td>
+                <td><a href="itemListing.php?id=' .(int)($row['product_id']). '" class="view-button">View</a></td>
+                <td><form method="POST" action="../private/CRUD/deleteProduct.php" onsubmit="return confirm(' . "Are you sure you want to delete this item?" . ');">
+                    <input type="hidden" name="product_id" value="' . (int)$row['product_id'] . '">
+                    <button type="submit" class="delete-button">Delete</button>
+                    </form>
+            </tr>';
+        }
+    } catch (PDOException $e) {
+        echo "Database error: " . $e->getMessage();
+    }
 }
 
 ?>

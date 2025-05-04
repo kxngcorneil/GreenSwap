@@ -37,12 +37,13 @@ try {
             "productCategory" => $_POST["productCategory"],
             "deliveryMethod" => $_POST["deliveryMethod"],
             "createdBy" => $_SESSION['Username'],
-            "swappable" => $swapable
+            "swappable" => $swapable,
+            "datecreated" => strval(date("Y-m-d"))
 
         ];
 
-        $sql = "INSERT INTO products (product_name, product_desc, price, product_image_link, product_category, delivery_method, created_by, is_swapable)
-                VALUES (:productName, :productDesc, :productPrice, :productImage, :productCategory, :deliveryMethod, :createdBy, :swappable)";
+        $sql = "INSERT INTO products (product_name, product_desc, price, product_image_link, product_category, delivery_method, created_by, is_swapable, createdON)
+                VALUES (:productName, :productDesc, :productPrice, :productImage, :productCategory, :deliveryMethod, :createdBy, :swappable, :datecreated)";
 
         $stmt = $conn->prepare($sql);
         $stmt->execute($newProduct);
@@ -120,5 +121,3 @@ try {
 
 <br><br>
 <a href="../../public/index.php">Back to home</a>
-
-<?php require __DIR__ . '../../../public/templates/footerforCRUD.php'; ?>

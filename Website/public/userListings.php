@@ -1,17 +1,33 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset='utf-8'>
     <meta http-equiv='X-UA-Compatible' content='IE=edge'>
     <title>User Listings</title>
     <meta name='viewport' content='width=device-width, initial-scale=1'>
-    <link rel='stylesheet' type='text/css' media='screen' href='css/userlisting.css'>
+    <link rel='stylesheet' type='text/css' media='screen' href='css/userListing.css'>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300&display=swap" rel="stylesheet">
 </head>
+
+
 <body>
-    <h1>User Listings</h1>
+    <header>
+        <?php require __DIR__ . '/../public/templates/navbar.php'; ?>
+        <?php require __DIR__ . '/../private/functions.php'; ?>
+    </header>
+
+    <?php if ($_SESSION['Active'] == false) {
+    header("location: ../../public/login.php");
+}
+?>
+
+<br>
+<br>
+
+    <h1>Your Listings</h1>
     <table class="product-table">
         <thead>
             <tr>
@@ -23,21 +39,9 @@
             </tr>
         </thead>
         <tbody>
-            <tr>
-                <td><img src="" alt="Product Image" class="product-image"></td>
-                <td>Item Name Here</td>
-                <td>2025-05-01</td>
-                <td><a href="" class="view-button">View</a></td>
-                <td><button class="delete-button">Delete</button></td>
-            </tr>
-            <tr>
-                <td><img src="" alt="Product Image" class="product-image"></td>
-                <td>Item Name Here</td>
-                <td>2025-05-01</td>
-                <td><a href="" class="view-button">View</a></td>
-                <td><button class="delete-button">Delete</button></td>
-            </tr>
+            <?php getUserItems(); ?>
         </tbody>
     </table>
 </body>
+
 </html>

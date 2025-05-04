@@ -35,8 +35,7 @@ fas fa-store
                 <a href="#"><i class="fas fa-list"></i> Listing <i class="fa-solid fa-caret-down"></i></a>
                 <div class="Listings-Dropdown">
                     <a href="../../private/CRUD/CreateProduct.php">List New Product</a>
-                    <a href="#">Edit Existing Product</a>
-                    <a href="#">Delete Existing Product</a>
+                    <a href="userListings.php">Manage Your Products</a>
                 </div>
             </li>
         </ul>

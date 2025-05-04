@@ -41,6 +41,8 @@
                     <p class="link"><a href="#">General FAQs</a></p>
                 </div>
             </div>
+
+            
             <div class="Newsletter">
                 <form action="" method="POST">
                     <input type="email" name="email" placeholder="Enter Your Email" required />
