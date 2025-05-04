@@ -1,6 +1,10 @@
 <?php require __DIR__ . '../../../public/templates/navbarforCRUD.php'; ?>
 <?php
 
+if ($_SESSION['Active'] == false) {
+    header("location: ../../public/login.php");
+}
+
 try {
     if (isset($_POST["submit"])) {
         require '../database_connection.php';
@@ -17,17 +21,27 @@ try {
             echo "File upload failed.";
         }
 
+        if ($_POST["isSwapable"] == "on") {
+            $swapable = 1;
+        } else {
+            $swapable = 0;
+        }
+
+
         $newProduct = [
             "productName" => $_POST["productName"],
             "productPrice" => $_POST["productPrice"],
             "productDesc" => $_POST["productDesc"],
             "productImage" => 'images/productImages/' . $imageName,
             "productCategory" => $_POST["productCategory"],
-            "deliveryMethod" => $_POST["deliveryMethod"]
+            "deliveryMethod" => $_POST["deliveryMethod"],
+            "createdBy" => $_SESSION['Username'],
+            "swappable" => $swapable
+
         ];
 
-        $sql = "INSERT INTO products (product_name, product_desc, price, product_image_link, product_category, delivery_method)
-                VALUES (:productName, :productDesc, :productPrice, :productImage, :productCategory, :deliveryMethod)";
+        $sql = "INSERT INTO products (product_name, product_desc, price, product_image_link, product_category, delivery_method, created_by, is_swapable)
+                VALUES (:productName, :productDesc, :productPrice, :productImage, :productCategory, :deliveryMethod, :createdBy, :swappable)";
 
         $stmt = $conn->prepare($sql);
         $stmt->execute($newProduct);
@@ -103,4 +117,4 @@ try {
 <br><br>
 <a href="../../public/index.php">Back to home</a>
 
-<?php require __DIR__ . '../../../public/templates/footer.php'; ?>
+<?php require __DIR__ . '../../../public/templates/footerforCRUD.php'; ?>

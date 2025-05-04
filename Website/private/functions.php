@@ -188,7 +188,12 @@ function fillInformation($productID)
                                 <i class="fa-solid fa-truck"></i>
                             </td>
                             <td> Delivery Method </td>
-                            <td>' . $row['delivery_method'] . ' </td>
+                            <td>'; if($row['delivery_method'] == "Home_Dropoff"){
+                                echo "Home Dropoff";}
+                                else{
+                                    echo $row['delivery_method'];
+                                }
+                            echo ' </td>
                         </tr>
                         <tr>
                             <td>
