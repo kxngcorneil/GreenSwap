@@ -18,7 +18,7 @@
 <?php
 try {
     if (isset($_POST["submit"])) {
-        require '../private/database_connection.php'; // Ensure this file defines $dsn, $username, $password, $options
+        require '../private/database_connection.php';
         $conn = new PDO($dsn, $username, $password, $options);
         $conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
         $conn->exec("USE Greenswap");
@@ -40,8 +40,6 @@ try {
 
         echo "<p style='color: green; font-weight: bold;'>Signup successful!</p>";
 
-        // Optional debug:
-        // echo "<pre>"; print_r($newUser); echo "</pre>";
     }
 } catch (PDOException $e) {
     echo "<p style='color: red;'>Database error: " . $e->getMessage() . "</p>";
@@ -68,6 +66,7 @@ try {
 
     <label for="psw"><b>Password</b></label>
     <input type="password" placeholder="Enter Your Password" name="password" required> <br>
+    </form>
 
     <div class="button">
       <button type="submit" name="submit" class="signupbtn">Sign Up</button>
@@ -76,8 +75,9 @@ try {
 
       <button class="existinguser"><a href="index.php" class="existinguser">Return to Homepage</a></button>
     </div>
-  </div>
+    </div>
 </form>
+
 
 </body>
 </html>

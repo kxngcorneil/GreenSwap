@@ -66,18 +66,25 @@ $total = $subtotal + $shipping;
         </div>
 
         <div class="cart-right">
-            <h3>Card Details</h3>
+            <h3>Your Details</h3>
             <div class="card-icons">
                 <!-- Card icons will go here -->
             </div>
 
+            
+
             <form class="card-form">
-                <input type="text" placeholder="Cardholder's Name" />
-                <input type="text" placeholder="Card Number" />
+                <input type = "text" placeholder="Delivery Address" requried>
+                <Br>
+                <br>
+                <input type="text" placeholder="Cardholder's Name" required />
+                <input type="text" placeholder="Card Number" required maxlength="16" />
                 <div class="form-group">
-                    <input type="text" placeholder="Expiration" />
-                    <input type="text" placeholder="CVV" />
+                    <input type="text" placeholder="Expiration" required maxlength="4" />
+                    <input type="text" placeholder="CVV" required maxlength="3" />
                 </div>
+
+                <button class="checkout-btn">Checkout</button>
             </form>
 
             <div class="totals">
@@ -85,8 +92,6 @@ $total = $subtotal + $shipping;
                 <p>Shipping <span>$<?php echo number_format($shipping, 2); ?></span></p>
                 <p class="total">Total <span>$<?php echo number_format($total, 2); ?></span></p>
             </div>
-
-            <button class="checkout-btn">Checkout</button>
         </div>
     </div>
 

@@ -1,6 +1,4 @@
-
-<?php require __DIR__ . '../../../public/templates/navbarforCRUD.php'; ?>
-<?php
+<?php session_start();
 
 if ($_SESSION['Active'] == false) {
     header("location: ../../public/login.php");
@@ -16,15 +14,9 @@ try {
         $imageName = basename($_FILES['productImages']['name']);
         $imagePath = $targetDir . $imageName;
 
-        if (move_uploaded_file($_FILES['productImages']['tmp_name'], $imagePath)) {
-            echo "File uploaded to: $imagePath";
-        } else {
-            echo "File upload failed.";
-        }
-
-        if ($_POST["isSwapable"] == "on") {
+        if (isset($_POST["isSwapable"]) && $_POST["isSwapable"] == "on") {
             $swapable = 1;
-        } else {
+        } else{
             $swapable = 0;
         }
 
@@ -37,7 +29,7 @@ try {
             "productCategory" => $_POST["productCategory"],
             "deliveryMethod" => $_POST["deliveryMethod"],
             "createdBy" => $_SESSION['Username'],
-            "swappable" => $swapable,
+            "swappable" => @$swapable,
             "datecreated" => strval(date("Y-m-d"))
 
         ];
@@ -66,12 +58,10 @@ try {
 
 </html>
 
-<br><br><br><br><br>
 
+<h2 class="header">Create a new Product</h2>
 
-<h2>Create a new Product</h2>
-
-<form method="POST" enctype="multipart/form-data">
+<form method="POST" enctype="multipart/form-data" >
 
     <label for="productName">Product Name:</label>
     <input type="text" name="productName" id="productName" required>
@@ -116,8 +106,6 @@ try {
     <input type="checkbox" name="isSwapable" id="isSwapable">
     <br><br>
 
-    <input type="submit" name="submit" value="Submit">
+    <input type="submit" name="submit" value="Submit" onclick="redirect('../../index.php')"> 
+    <button><a href="../../public/index.php">Back to home</a></button>
 </form>
-
-<br><br>
-<a href="../../public/index.php">Back to home</a>

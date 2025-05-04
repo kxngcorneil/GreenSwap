@@ -20,7 +20,7 @@
     </header>
 
     <?php if ($_SESSION['Active'] == false) {
-    header("location: ../../public/login.php");
+    header("location: login.php");
 }
 ?>
 
@@ -35,6 +35,7 @@
                 <th>Item Name</th>
                 <th>Created Date</th>
                 <th>View Product</th>
+                <th>Edit Product</th>
                 <th>Delete</th>
             </tr>
         </thead>

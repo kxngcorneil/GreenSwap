@@ -312,6 +312,7 @@ function getUserItems() {
                 <td>' . htmlspecialchars($row['product_name']) . '</td>
                 <td>' . htmlspecialchars($row['createdOn']) . '</td>
                 <td><a href="itemListing.php?id=' .(int)($row['product_id']). '" class="view-button">View</a></td>
+                <td><a href="itemListing.php?id=123" class="edit-button">Edit</a></td>
                 <td><form method="POST" action="../private/CRUD/deleteProduct.php" onsubmit="return confirm(' . "Are you sure you want to delete this item?" . ');">
                     <input type="hidden" name="product_id" value="' . (int)$row['product_id'] . '">
                     <button type="submit" class="delete-button">Delete</button>
