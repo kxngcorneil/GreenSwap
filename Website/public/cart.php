@@ -68,7 +68,6 @@ $total = $subtotal + $shipping;
         <div class="cart-right">
             <h3>Your Details</h3>
             <div class="card-icons">
-                <!-- Card icons will go here -->
             </div>
 
             
